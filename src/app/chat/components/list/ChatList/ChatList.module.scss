@@ -1,0 +1,23 @@
+.textField{
+    display: flex;
+    align-items:center;
+    gap:20px;
+    padding:20px;
+    height:20px;
+}
+
+.textSearch{
+    flex:1;
+    display: flex;
+    gap:20px;
+    align-items: center;
+    border-radius: 5px;
+    :local{
+        input{
+        border:none;
+        background-color: transparent;
+        outline: none;
+        color:#000;
+        }
+    }
+}

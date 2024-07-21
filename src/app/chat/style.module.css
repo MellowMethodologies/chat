@@ -1,0 +1,41 @@
+
+.App {
+    font-family: Arial, sans-serif;
+  }
+  
+/* there is some lines in the chat between the container and height edges */
+.list{
+  grid-area: list;
+
+}
+
+.chat{
+  grid-area: chat;
+
+}
+
+.detail{
+  grid-area: detail;
+}
+
+.body {
+  display: flex;
+  padding-top: 2rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.container{
+  width: 95vw;
+  height: 95vh;
+  background-color: rgba(17,25,40, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255,0125);
+  display: grid;
+  grid-template-areas:'list chat detail';
+}
+
+.container > *{
+  border:1px solid #000;
+}
