@@ -1,23 +1,71 @@
-.textField{
+.textDiv{
     display: flex;
     align-items:center;
+    justify-content: space-around;
     gap:20px;
     padding:20px;
-    height:20px;
 }
 
-.textSearch{
+.textField{
     flex:1;
     display: flex;
+    background-color: rgba( 17, 25, 40, 0.5);
     gap:20px;
     align-items: center;
     border-radius: 5px;
+    max-width: 25rem;
+    height:36px;
+
     :local{
         input{
         border:none;
         background-color: transparent;
         outline: none;
-        color:#000;
+        color:white;
+        }
+        .searchIcon{
+            height:36px;
+            gap:10px;
+            padding-left: 10px;
         }
     }
+}
+
+.add {
+    background-color: rgba(17,25,40,0.5);
+    padding:10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.friends{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding:20px 20px 20px 20px;
+    gap:10px;
+}
+
+.friend{
+    display: flex;
+    padding: 20px;
+    background-color: rgba( 17, 25, 40, 0.5);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    .lastMessage{
+        font-size: 10px;
+    }
+    :local{
+        img{
+            border-radius: 50%;
+        }
+    }
+}
+
+.userInfo{
+    display: flex;
+    gap:20px;
+    
 }
