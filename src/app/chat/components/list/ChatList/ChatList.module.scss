@@ -57,7 +57,7 @@
     cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     .lastMessage{
-        font-size: 10px;
+        font-size: 18px;
     }
     :local{
         img{
@@ -66,11 +66,18 @@
     }
 }
 
-
+.userName{
+    font-size: 25px;
+    font-weight: bold;
+}
 
 .nameChat{
     display: flex;
     flex-direction: column;
+}
+
+.lastMessage{
+    font-weight: bold;
 }
 
 .userInfo{

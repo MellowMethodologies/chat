@@ -9,7 +9,7 @@ function User({ id, name, pic, rank }) {
   return (
       <div className={style.friend}>
         <div className={style.userInfo}>
-          <Image height={50} width={50} src={pic} alt={name} className={style.userPic} />
+          <Image height={75} width={75} src={pic} alt={name} className={style.userPic} />
           <div className={style.nameChat}>
             <span className={style.userName}>{name} {rank}</span>
             <p className={style.lastMessage}>Last message</p>

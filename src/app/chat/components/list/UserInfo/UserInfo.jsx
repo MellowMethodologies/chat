@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function UserInfo({ name, pic }) {
   return (
     <div className={style.userInfo}>
-      <Image priority src={pic} alt={name} width={60} height={60} />
+      <Image priority src={pic} alt={name} width={80} height={80} />
       <h2>{name}</h2>
     </div>
   )

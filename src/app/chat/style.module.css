@@ -34,8 +34,8 @@
 }
 
 .chat {
-  border-right: 1px solid white;
   grid-area: chat;
+  border-right: 1px solid white;
 }
 
 .detail {
