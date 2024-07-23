@@ -1,41 +1,43 @@
+/* style.module.css */
 
+/* Global reset (if not already present in your global CSS) */
 .App {
-    font-family: Arial, sans-serif;
-  }
-  
-/* there is some lines in the chat between the container and height edges */
-.list{
-  grid-area: list;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.chat{
-  grid-area: chat;
-
-}
-
-.detail{
-  grid-area: detail;
-}
-
+/* Ensure the page takes up full viewport height */
 .body {
+  min-height: 100vh;
   display: flex;
-  padding-top: 2rem;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
-.container{
+.container {
   width: 95vw;
   height: 95vh;
-  background-color: rgba(17,25,40, 0.75);
+  background-color: rgba(17, 25, 40, 0.55);
   backdrop-filter: blur(20px) saturate(180%);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255,0125);
   display: grid;
-  grid-template-areas:'list chat detail';
+  grid-template-areas: 'list chat detail';
+  grid-template-columns: 1.5fr 3.5fr 1fr;
+  overflow: hidden; /* Prevent any content from spilling out */
 }
 
-.container > *{
-  border:1px solid #000;
+/* Styles for your components */
+.list {
+  grid-area: list;
+  border-right: 1px solid white;
+}
+
+.chat {
+  border-right: 1px solid white;
+  grid-area: chat;
+}
+
+.detail {
+  grid-area: detail;
 }

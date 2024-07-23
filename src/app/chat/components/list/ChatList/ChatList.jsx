@@ -8,15 +8,13 @@ import Image from 'next/image';
 function User({ id, name, pic, rank }) {
   return (
       <div className={style.friend}>
-
-
         <div className={style.userInfo}>
           <Image height={50} width={50} src={pic} alt={name} className={style.userPic} />
-          <span className={style.userName}>{name} {rank}</span>
-          <p className={style.lastMessage}>Last message</p>
+          <div className={style.nameChat}>
+            <span className={style.userName}>{name} {rank}</span>
+            <p className={style.lastMessage}>Last message</p>
+          </div>
         </div>
-        
-
 
         <div className={style.notification}>
           <span>notif</span>
@@ -28,12 +26,12 @@ function User({ id, name, pic, rank }) {
 }
 function ChatList() {
   const users = [
-    { id: 1, name: "John Doe", pic: "/avatars/1.jpeg" },
-    { id: 1, name: "John Doe", pic: "/avatars/1.jpeg" },
-    { id: 1, name: "John Doe", pic: "/avatars/1.jpeg" },
-    { id: 2, name: "Jane Smith", pic: "/avatars/2.jpeg" },
-    { id: 2, name: "Jane Smith", pic: "/avatars/2.jpeg" },
-    { id: 2, name: "Jane Smith", pic: "/avatars/2.jpeg" },
+    { id: 1, name: "John", pic: "/avatars/1.jpeg",  },
+    { id: 2, name: "Doe", pic: "/avatars/1.jpeg" },
+    { id: 3, name: "John Doe", pic: "/avatars/3.jpeg" },
+    { id: 4, name: "Jane", pic: "/avatars/2.jpeg" },
+    { id: 5, name: "Smith ", pic: "/avatars/2.jpeg" },
+    { id: 6, name: "Jane Smith", pic: "/avatars/3.jpeg" },
   ];
   
   
@@ -60,7 +58,7 @@ function ChatList() {
 
     {/*                     the friends field                    */}
     
-    <div className={style.friends}>
+      <div className={style.friends}>
         {users.map(user => (
           <User key={user.id} id={user.id} name={user.name} rank={"{rank}"} pic={user.pic} />
         ))}

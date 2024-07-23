@@ -4,18 +4,22 @@ import List from './components/list/List.jsx'
 import Detail from './components/detail/Detail.jsx'
 import style from './style.module.css'
 
-
-function page() {
+function Page() {
   return (
     <div className={style.body}>
       <div className={style.container}>
-        <List/>
-        <Chat/>
-        <Detail/>
+        <div className={style.list}>
+          <List/>
+        </div>
+        <div className={style.chat}>
+          <Chat/>
+        </div>
+        <div className={style.detail}>
+          <Detail/>
+        </div>
       </div>
     </div>
   )
 }
 
-export default page
-                         
+export default Page
